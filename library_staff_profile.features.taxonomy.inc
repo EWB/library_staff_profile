@@ -1,0 +1,36 @@
+<?php
+/**
+ * @file
+ * library_staff_profile.features.taxonomy.inc
+ */
+
+/**
+ * Implements hook_taxonomy_default_vocabularies().
+ */
+function library_staff_profile_taxonomy_default_vocabularies() {
+  return array(
+    'library_deparments' => array(
+      'name' => 'Library Deparments',
+      'machine_name' => 'library_deparments',
+      'description' => '',
+      'hierarchy' => '0',
+      'module' => 'taxonomy',
+      'weight' => '0',
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          0 => 'skos:ConceptScheme',
+        ),
+        'name' => array(
+          'predicates' => array(
+            0 => 'dc:title',
+          ),
+        ),
+        'description' => array(
+          'predicates' => array(
+            0 => 'rdfs:comment',
+          ),
+        ),
+      ),
+    ),
+  );
+}
