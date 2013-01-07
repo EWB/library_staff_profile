@@ -10,6 +10,88 @@
 function library_staff_profile_field_default_fields() {
   $fields = array();
 
+  // Exported field: 'node-library_staff_profile-field_position'.
+  $fields['node-library_staff_profile-field_position'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_position',
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'text',
+      'settings' => array(
+        'max_length' => '255',
+      ),
+      'translatable' => '0',
+      'type' => 'text',
+    ),
+    'field_instance' => array(
+      'bundle' => 'library_staff_profile',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => 9,
+        ),
+        'full' => array(
+          'label' => 'inline',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => '0',
+        ),
+        'search_result' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_position',
+      'label' => 'Position',
+      'required' => 0,
+      'settings' => array(
+        'text_processing' => '0',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'text',
+        'settings' => array(
+          'size' => '60',
+        ),
+        'type' => 'text_textfield',
+        'weight' => '2',
+      ),
+    ),
+  );
+
   // Exported field: 'node-library_staff_profile-field_staff_profile_bio'.
   $fields['node-library_staff_profile-field_staff_profile_bio'] = array(
     'field_config' => array(
@@ -48,7 +130,21 @@ function library_staff_profile_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 3,
+          'weight' => '3',
+        ),
+        'full' => array(
+          'label' => 'hidden',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => '5',
+        ),
+        'search_result' => array(
+          'label' => 'hidden',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => '1',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -74,7 +170,7 @@ function library_staff_profile_field_default_fields() {
           'summary_rows' => 5,
         ),
         'type' => 'text_textarea_with_summary',
-        'weight' => '4',
+        'weight' => '5',
       ),
     ),
   );
@@ -124,7 +220,23 @@ function library_staff_profile_field_default_fields() {
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => 8,
+          'weight' => '8',
+        ),
+        'full' => array(
+          'label' => 'inline',
+          'module' => 'ds',
+          'settings' => array(
+            'taxonomy_term_link' => TRUE,
+            'taxonomy_term_separator' => ', ',
+          ),
+          'type' => 'ds_taxonomy_separator',
+          'weight' => '1',
+        ),
+        'search_result' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '16',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -145,7 +257,7 @@ function library_staff_profile_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '8',
+        'weight' => '9',
       ),
     ),
   );
@@ -177,7 +289,20 @@ function library_staff_profile_field_default_fields() {
           'module' => 'email',
           'settings' => array(),
           'type' => 'email_default',
-          'weight' => 1,
+          'weight' => '1',
+        ),
+        'full' => array(
+          'label' => 'inline',
+          'module' => 'email',
+          'settings' => array(),
+          'type' => 'email_default',
+          'weight' => '2',
+        ),
+        'search_result' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '11',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -200,7 +325,7 @@ function library_staff_profile_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'email_textfield',
-        'weight' => '2',
+        'weight' => '3',
       ),
     ),
   );
@@ -245,7 +370,20 @@ function library_staff_profile_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 6,
+          'weight' => '6',
+        ),
+        'full' => array(
+          'label' => 'inline',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => '4',
+        ),
+        'search_result' => array(
+          'label' => 'hidden',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '14',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -269,7 +407,7 @@ function library_staff_profile_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '6',
+        'weight' => '7',
       ),
     ),
   );
@@ -395,7 +533,19 @@ Prof.',
             'output' => 'default',
           ),
           'type' => 'name_formatter',
-          'weight' => 2,
+          'weight' => '2',
+        ),
+        'full' => array(
+          'label' => 'hidden',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '15',
+        ),
+        'search_result' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '12',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -488,7 +638,20 @@ Prof.',
           'module' => 'phone',
           'settings' => array(),
           'type' => 'phone',
-          'weight' => 4,
+          'weight' => '4',
+        ),
+        'full' => array(
+          'label' => 'inline',
+          'module' => 'phone',
+          'settings' => array(),
+          'type' => 'phone',
+          'weight' => '3',
+        ),
+        'search_result' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '13',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -514,7 +677,7 @@ Prof.',
         'module' => 'phone',
         'settings' => array(),
         'type' => 'phone_textfield',
-        'weight' => '5',
+        'weight' => '6',
       ),
     ),
   );
@@ -562,7 +725,31 @@ Prof.',
             'image_style' => '',
           ),
           'type' => 'image',
-          'weight' => 5,
+          'weight' => '5',
+        ),
+        'full' => array(
+          'label' => 'hidden',
+          'module' => 'colorbox',
+          'settings' => array(
+            'colorbox_caption' => 'title',
+            'colorbox_caption_custom' => '',
+            'colorbox_gallery' => 'post',
+            'colorbox_gallery_custom' => '',
+            'colorbox_image_style' => 'large',
+            'colorbox_node_style' => '320',
+          ),
+          'type' => 'colorbox',
+          'weight' => '6',
+        ),
+        'search_result' => array(
+          'label' => 'hidden',
+          'module' => 'image',
+          'settings' => array(
+            'image_link' => 'content',
+            'image_style' => 'thumbnail',
+          ),
+          'type' => 'image',
+          'weight' => '2',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -594,7 +781,7 @@ Prof.',
           'progress_indicator' => 'throbber',
         ),
         'type' => 'image_image',
-        'weight' => '3',
+        'weight' => '4',
       ),
     ),
   );
@@ -637,7 +824,19 @@ Prof.',
           'module' => 'list',
           'settings' => array(),
           'type' => 'list_default',
-          'weight' => 7,
+          'weight' => '7',
+        ),
+        'full' => array(
+          'label' => 'hidden',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '16',
+        ),
+        'search_result' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '15',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -658,7 +857,7 @@ Prof.',
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '7',
+        'weight' => '8',
       ),
     ),
   );
@@ -672,6 +871,7 @@ Prof.',
   t('Name');
   t('Phone');
   t('Photograph');
+  t('Position');
   t('Position Type');
   t('example:  ODY 116');
 

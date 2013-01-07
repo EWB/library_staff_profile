@@ -24,7 +24,7 @@ function library_staff_profile_node_info() {
       'base' => 'node_content',
       'description' => t('Profile for library staff member'),
       'has_title' => '1',
-      'title_label' => t('Position Title'),
+      'title_label' => t('Name'),
       'help' => '',
     ),
   );
