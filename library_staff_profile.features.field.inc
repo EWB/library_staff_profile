@@ -226,7 +226,7 @@ function library_staff_profile_field_default_fields() {
           'label' => 'inline',
           'module' => 'ds',
           'settings' => array(
-            'taxonomy_term_link' => TRUE,
+            'taxonomy_term_link' => 0,
             'taxonomy_term_separator' => ', ',
           ),
           'type' => 'ds_taxonomy_separator',
