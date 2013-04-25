@@ -18,7 +18,7 @@ function library_staff_profile_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'search_result';
   $ds_fieldsetting->settings = array(
     'title' => array(
-      'weight' => '0',
+      'weight' => '1',
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
@@ -90,21 +90,19 @@ function library_staff_profile_ds_layout_settings_info() {
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'library_staff_profile';
   $ds_layout->view_mode = 'search_result';
-  $ds_layout->layout = 'ds_2col';
+  $ds_layout->layout = 'ds_1col';
   $ds_layout->settings = array(
     'regions' => array(
-      'left' => array(
-        0 => 'title',
-        1 => 'field_staff_profile_bio',
-      ),
-      'right' => array(
-        2 => 'field_staff_profile_photograph',
+      'ds_content' => array(
+        0 => 'field_staff_profile_photograph',
+        1 => 'title',
+        2 => 'field_staff_profile_bio',
       ),
     ),
     'fields' => array(
-      'title' => 'left',
-      'field_staff_profile_bio' => 'left',
-      'field_staff_profile_photograph' => 'right',
+      'field_staff_profile_photograph' => 'ds_content',
+      'title' => 'ds_content',
+      'field_staff_profile_bio' => 'ds_content',
     ),
     'classes' => array(
       'layout_class' => array(
@@ -112,8 +110,7 @@ function library_staff_profile_ds_layout_settings_info() {
       ),
     ),
     'wrappers' => array(
-      'left' => 'div',
-      'right' => 'div',
+      'ds_content' => 'div',
     ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',
