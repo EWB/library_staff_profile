@@ -34,16 +34,6 @@ function library_staff_profile_views_default_views() {
   $handler->display->display_options['pager']['options']['quantity'] = '9';
   $handler->display->display_options['style_plugin'] = 'list';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Header: Global: Text area */
-  $handler->display->display_options['header']['area']['id'] = 'area';
-  $handler->display->display_options['header']['area']['table'] = 'views';
-  $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['label'] = 'General Info:';
-  $handler->display->display_options['header']['area']['content'] = 'Owen D. Young Library (315) 229-5451<br>
-Science Library (315) 229-5400<br>
-St. Lawrence University<br>
-23 Romoda Drive, Canton, NY 13617 <br>';
-  $handler->display->display_options['header']['area']['format'] = 'richtext_editor';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
