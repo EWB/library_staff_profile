@@ -97,16 +97,15 @@ function library_staff_profile_views_default_views() {
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'footable';
   $handler->display->display_options['style_options']['columns'] = array(
-    'title' => 'title',
+    'field_staff_profile_name' => 'field_staff_profile_name',
     'field_position' => 'field_position',
     'field_staff_profile_email' => 'field_staff_profile_email',
-    'field_staff_profile_name' => 'field_staff_profile_name',
     'field_staff_profile_phone' => 'field_staff_profile_phone',
   );
   $handler->display->display_options['style_options']['default'] = '-1';
   $handler->display->display_options['style_options']['info'] = array(
-    'title' => array(
-      'sortable' => 0,
+    'field_staff_profile_name' => array(
+      'sortable' => 1,
       'default_sort_order' => 'asc',
       'align' => '',
       'separator' => '',
@@ -126,13 +125,6 @@ function library_staff_profile_views_default_views() {
       'separator' => '',
       'empty_column' => 0,
     ),
-    'field_staff_profile_name' => array(
-      'sortable' => 0,
-      'default_sort_order' => 'asc',
-      'align' => '',
-      'separator' => '',
-      'empty_column' => 0,
-    ),
     'field_staff_profile_phone' => array(
       'align' => '',
       'separator' => '',
@@ -140,10 +132,10 @@ function library_staff_profile_views_default_views() {
     ),
   );
   $handler->display->display_options['style_options']['footable'] = array(
-    'expand' => 'title',
+    'expand' => 'field_staff_profile_name',
     'hide' => array(
-      'title' => array(
-        'phone' => 0,
+      'field_staff_profile_name' => array(
+        'phone' => 'phone',
         'tablet' => 0,
       ),
       'field_position' => array(
@@ -151,10 +143,6 @@ function library_staff_profile_views_default_views() {
         'tablet' => 0,
       ),
       'field_staff_profile_email' => array(
-        'phone' => 'phone',
-        'tablet' => 0,
-      ),
-      'field_staff_profile_name' => array(
         'phone' => 'phone',
         'tablet' => 0,
       ),
@@ -168,26 +156,10 @@ function library_staff_profile_views_default_views() {
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Title */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'node';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  /* Field: Content: Position */
-  $handler->display->display_options['fields']['field_position']['id'] = 'field_position';
-  $handler->display->display_options['fields']['field_position']['table'] = 'field_data_field_position';
-  $handler->display->display_options['fields']['field_position']['field'] = 'field_position';
-  /* Field: Content: E-mail */
-  $handler->display->display_options['fields']['field_staff_profile_email']['id'] = 'field_staff_profile_email';
-  $handler->display->display_options['fields']['field_staff_profile_email']['table'] = 'field_data_field_staff_profile_email';
-  $handler->display->display_options['fields']['field_staff_profile_email']['field'] = 'field_staff_profile_email';
-  $handler->display->display_options['fields']['field_staff_profile_email']['label'] = 'Email';
-  $handler->display->display_options['fields']['field_staff_profile_email']['element_label_colon'] = FALSE;
   /* Field: Content: Name */
   $handler->display->display_options['fields']['field_staff_profile_name']['id'] = 'field_staff_profile_name';
   $handler->display->display_options['fields']['field_staff_profile_name']['table'] = 'field_data_field_staff_profile_name';
   $handler->display->display_options['fields']['field_staff_profile_name']['field'] = 'field_staff_profile_name';
-  $handler->display->display_options['fields']['field_staff_profile_name']['label'] = '';
-  $handler->display->display_options['fields']['field_staff_profile_name']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_staff_profile_name']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_staff_profile_name']['click_sort_column'] = 'title';
   $handler->display->display_options['fields']['field_staff_profile_name']['settings'] = array(
@@ -201,6 +173,16 @@ function library_staff_profile_views_default_views() {
     'multiple_el_al_min' => '3',
     'multiple_el_al_first' => '1',
   );
+  /* Field: Content: Position */
+  $handler->display->display_options['fields']['field_position']['id'] = 'field_position';
+  $handler->display->display_options['fields']['field_position']['table'] = 'field_data_field_position';
+  $handler->display->display_options['fields']['field_position']['field'] = 'field_position';
+  /* Field: Content: E-mail */
+  $handler->display->display_options['fields']['field_staff_profile_email']['id'] = 'field_staff_profile_email';
+  $handler->display->display_options['fields']['field_staff_profile_email']['table'] = 'field_data_field_staff_profile_email';
+  $handler->display->display_options['fields']['field_staff_profile_email']['field'] = 'field_staff_profile_email';
+  $handler->display->display_options['fields']['field_staff_profile_email']['label'] = 'Email';
+  $handler->display->display_options['fields']['field_staff_profile_email']['element_label_colon'] = FALSE;
   /* Field: Content: Phone */
   $handler->display->display_options['fields']['field_staff_profile_phone']['id'] = 'field_staff_profile_phone';
   $handler->display->display_options['fields']['field_staff_profile_phone']['table'] = 'field_data_field_staff_profile_phone';
