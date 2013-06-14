@@ -432,6 +432,7 @@ function library_staff_profile_field_default_fields() {
       'locked' => '0',
       'module' => 'name',
       'settings' => array(
+        'allow_family_or_given' => 0,
         'autocomplete_separator' => array(
           'credentials' => ', ',
           'family' => ' -',
@@ -580,6 +581,7 @@ Prof.',
           'title' => '',
         ),
         'override_format' => 'default',
+        'show_component_required_marker' => 0,
         'size' => array(
           'credentials' => '35',
           'family' => '20',

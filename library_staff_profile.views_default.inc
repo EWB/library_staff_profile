@@ -135,7 +135,7 @@ function library_staff_profile_views_default_views() {
     'expand' => 'field_staff_profile_name',
     'hide' => array(
       'field_staff_profile_name' => array(
-        'phone' => 'phone',
+        'phone' => 0,
         'tablet' => 0,
       ),
       'field_position' => array(
